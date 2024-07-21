@@ -1,0 +1,43 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) 
+    {
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the num of subjects: ");
+        int num=s.nextInt();
+        int totalmarks=0;
+        char grade;
+        for (int i=1;i<=num;i++) 
+        {
+            System.out.println("Enter mark for the subject " + i + ": ");
+            int marks = s.nextInt();
+            totalmarks=totalmarks+marks;
+        }
+
+        double avg=(double)totalmarks/num;
+        if (avg>=90) 
+        {
+            grade = 'A';
+        } 
+        else if (avg>= 80) 
+        {
+            grade = 'B';
+        } 
+        else if (avg >= 70) 
+        {
+            grade = 'C';
+        } 
+        else if (avg >= 60) 
+        {
+            grade = 'D';
+        } 
+        else 
+        {
+            grade = 'F';
+        }
+        System.out.println("Total Marks: \n" + totalmarks);
+        System.out.printf("Average: %.2f\n", avg);
+        System.out.println("Grade: " + grade);
+    }
+}
