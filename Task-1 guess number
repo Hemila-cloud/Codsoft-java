@@ -1,0 +1,37 @@
+import java.util.*;
+
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        Scanner s = new Scanner(System.in);
+        int gnum = 1 + (int) (100 * Math.random());
+        int m_attempts = 5;
+
+        System.out.println("Guess the number within " + m_attempts + " trials");
+
+        for (int attempt = 1; attempt <= m_attempts; attempt++) {
+            System.out.print("Attempt " + attempt + ": Enter your guess: ");
+            int guess = s.nextInt();
+
+            if (guess == gnum) 
+            {
+                System.out.println("Great! You guessed the number.");
+                break;
+            } 
+            else if (guess < gnum) 
+            {
+                System.out.println("The number is greater than " + guess);
+            } 
+            else 
+            {
+                System.out.println("The number is less than " + guess);
+            }
+        }
+
+        if (gnum != s.nextInt()) 
+        {
+            System.out.println("Out of attempts! The secret number was " + gnum);
+        }
+    }
+}
