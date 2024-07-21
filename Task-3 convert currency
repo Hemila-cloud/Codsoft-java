@@ -1,0 +1,13 @@
+import java.util.*;
+class Main
+{
+    public static void main(String[] args) 
+    {
+        double exchangerate =83.72;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter amount in US dollars: ");
+        double base_amt =s.nextDouble();
+        double converted_amt =base_amt * exchangerate;
+        System.out.printf("amount in INR: %.2f",converted_amt);
+    }
+}
